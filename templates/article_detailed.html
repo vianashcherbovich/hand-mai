@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block title %}{% endblock %}
+{% block body %}
+
+<div class="container">
+
+    <div class="alert alert-info">
+        <h2>{{ abc.title }}</h2>
+        <p>{{ abc.intro }}</p>
+        <p>{{ abc.text }}</p>
+        <p>{{ abc.dog }}</p>
+        <p>{{ abc.lll }}</p>
+        <p>{{ abc.a }}</p>
+        <p>{{ abc.date.date() }}</p>
+        <a href="/articles/{{ abc.id }}/delete" class="btn btn-danger">Удалить объявление</a>
+        <a href="/articles/{{ abc.id }}/update" class="btn btn-warning">Редактировать объявление</a>
+    </div>
+
+</div>
+
+{% endblock %}

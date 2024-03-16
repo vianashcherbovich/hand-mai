@@ -1,0 +1,72 @@
+{% extends 'template.html' %}
+
+{% block title %}{% endblock %}
+{% block body %}
+
+<style>
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 50px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+}
+
+.red {
+  background-color: #D71A1A;
+  color: white;
+}
+
+.blue {
+  background-color: #0E46C9;
+  color: white;
+}
+
+.green {
+  background-color: #14AC14;
+  color: white;
+}
+
+.a {
+  background-color: #7054CA;
+  color: white;
+}
+
+.q {
+  background-color: #42C1C1;
+  color: white;
+}
+
+.g {
+  background-color: #FF7400;
+  color: white;
+}
+
+.e {
+  background-color: #E8005E;
+  color: white;
+}
+
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
+<div class="container">
+
+    <form method="post">
+
+        <br><input name="title" class="form-control" placeholder="опишите товар"></input><br>
+        <a class="button button1" href="{{ url_for('articles') }}">подать объявление</a>
+
+    </form>
+
+</div>
+
+{% endblock %}

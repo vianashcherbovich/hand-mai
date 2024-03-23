@@ -1,82 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title><!DOCTYPE html>
-<html lang="en">
 </head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<style>
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px;
-  border-radius: 50px;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s;
-}
 
-.red {
-  background-color: #D71A1A;
-  color: white;
-}
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand d-md-none" href="#">
+      <svg class="bi" width="24" height="24"><use xlink:href="#aperture"></use></svg>
+      Aperture
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 justify-content-between">
+          <li class="nav-item"><a class="nav-link" href="#">
+            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"></use></svg>
+          </a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('create_article') }}">Подать объявление</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('d') }}">Отзывы</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('articles') }}">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('e') }}">Зарегистрироваться</a></li>
+          <li class="nav-item"><a class="nav-link" href="">
+            <svg class="bi" width="24" height="24"><use xlink:href="#cart"></use></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<form>
+    <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-.blue {
-  background-color: #0E46C9;
-  color: white;
-}
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
 
-.green {
-  background-color: #14AC14;
-  color: white;
-}
-
-.a {
-  background-color: #7054CA;
-  color: white;
-}
-
-.q {
-  background-color: #42C1C1;
-  color: white;
-}
-
-.g {
-  background-color: #FF7400;
-  color: white;
-}
-
-.e {
-  background-color: #E8005E;
-  color: white;
-}
-
-
-.button:hover {
-  background-color: #555;
-}
-
-</style>
-<a class="button g" type="button" href="{{ url_for('index') }}">главная</a>
-   <a class="button red" type="button" href="{{ url_for('create_article') }}">подать объявление</a>
-   <a class="button blue" type="button" href="{{ url_for('s') }}">описание товара</a>
-   <a class="button e" type="button" href="{{ url_for('e') }}">мои объявления(на покупку)</a>
-   <a class="button green" type="button" href="{{ url_for('d') }}">телефон</a>
-   <a class="button a" type="button" href="{{ url_for('index') }}">отзывы</a>
-   <a class="button q" type="button" href="{{ url_for('articles') }}">о нас</a>
-
-</body>
-
-</html>
-</head>
-<body>
-
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
+      </label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
+  </form>
 </body>
 </html>

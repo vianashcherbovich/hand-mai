@@ -29,6 +29,11 @@ def d():
     return render_template('d.html')
 
 
+@app.route('/r')
+def r():
+    return render_template('r.html')
+
+
 @app.route('/s')
 def s():
     return render_template('s.html')
